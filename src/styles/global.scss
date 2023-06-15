@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #031412;
+  font-size: 16px;
+  line-height: 1.4;
+
+  /* font-family: 'Playfair Display', serif; */
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  display: block;
+}
+
+label,
+input[type='checkbox'] {
+  cursor: pointer;
+}

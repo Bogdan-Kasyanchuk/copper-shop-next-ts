@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev-mac": "open http://localhost:3000 & next dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,15 +12,19 @@
   "dependencies": {
     "next": "13.4.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "swiper": "^9.4.1"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "autoprefixer": "10.4.14",
     "postcss": "8.4.24",
+    "prettier": "^2.8.8",
     "sass": "^1.63.4",
+    "server-only": "^0.0.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }

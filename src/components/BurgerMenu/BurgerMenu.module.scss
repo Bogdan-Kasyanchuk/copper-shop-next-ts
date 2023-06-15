@@ -1,0 +1,72 @@
+// const Backdrop = styled.div`
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 1000;
+//   background-color: rgba(0, 0, 0, 0.2);
+//   pointer-events: initial;
+
+//   ${size.tabletMin} {
+//     display: none;
+//   }
+// `;
+
+// const BurgerMenu = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   padding-bottom: 20px;
+//   background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+// `;
+
+// const BoxButton = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-bottom: 125px;
+// `;
+
+// const ListButtonBurger = styled.ul`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-left: 70px;
+// `;
+
+// const ItemButtonBurger = styled.li`
+//   position: relative;
+//   padding: 50px 10px 10px;
+//   background-color: #fff;
+//   color: #0b3f37;
+
+//   &:not(:last-child) {
+//     margin-right: 15px;
+//   }
+// `;
+
+// const CountBurger = styled.span`
+//   position: absolute;
+//   top: 35px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 1;
+//   color: #e4a16f;
+// `;
+
+// const ItemNavBurger = styled.li`
+//   font-weight: 500;
+//   font-size: 30px;
+//   line-height: 2.1;
+//   text-align: center;
+//   color: #fff;
+// `;
+
+// const ButtonBurger = styled.button`
+//   padding: 8px;
+//   color: #fff;
+//   background-color: transparent;
+//   cursor: pointer;
+// `;

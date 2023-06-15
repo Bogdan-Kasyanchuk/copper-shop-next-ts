@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 320px;
+
+  @include tabletMin {
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include laptopMin {
+    width: 1024px;
+  }
+
+  @include desktopMin {
+    width: 1440px;
+  }
+}
