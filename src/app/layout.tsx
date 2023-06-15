@@ -2,6 +2,8 @@ import { Open_Sans } from 'next/font/google';
 import type { ReactNode } from 'react';
 
 import '@/app/styles.scss';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 const openSans = Open_Sans({
   weight: ['400', '500', '600', '700'],
@@ -17,7 +19,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
       <body className={openSans.className}>
+        <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

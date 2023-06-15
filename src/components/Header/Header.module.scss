@@ -1,177 +1,174 @@
-// const BoxHeader = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: flex-end;
+.header {
+  // position: fixed;
+  // z-index: 900;
+  // top: 0;
+  // left: 0;
+  background-color: #0b3f37;
+  width: 100%;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
 
-//   &.scrolled {
-//     row-gap: 10px;
-//   }
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 
-//   ${size.tabletMin} {
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     row-gap: 50px;
+  @include tabletMin {
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
 
-//     img {
-//       width: 160px;
-//       height: 43px;
-//       margin-right: auto;
-//     }
-//   }
+    .logo {
+      width: 160px;
+      height: 43px;
+      margin-right: auto;
+    }
+  }
 
-//   ${size.min1024} {
-//     justify-content: space-between;
-//     flex-wrap: nowrap;
+  @include laptopMin {
+    justify-content: space-between;
+    flex-wrap: nowrap;
 
-//     img {
-//       margin-right: initial;
-//     }
-//   }
-// `;
+    .logo {
+      margin-right: initial;
+    }
+  }
+}
 
-// const Navigation = styled.nav`
-//   display: none;
+.navigation {
+  display: none;
 
-//   ${size.tabletMin} {
-//     display: block;
-//     order: 3;
-//   }
+  @include tabletMin {
+    display: block;
+    order: 3;
+  }
 
-//   ${size.min1024} {
-//     order: initial;
-//   }
-// `;
+  @include laptopMin {
+    order: initial;
+  }
+}
 
-// const NavList = styled.ul`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// `;
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-// const NavListItem = styled.li`
-//   &:not(:last-child) {
-//     margin-right: 55px;
+.navigation__item {
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+  border-bottom: 1px solid transparent;
 
-//     ${size.min1024} {
-//       margin-right: 35px;
-//     }
+  &:not(:last-child) {
+    margin-right: 55px;
 
-//     ${size.desktop} {
-//       margin-right: 55px;
-//     }
-//   }
+    @include laptopMin {
+      margin-right: 35px;
+    }
 
-//   ${size.desktop} {
-//     font-weight: 600;
-//     font-size: 20px;
-//   }
+    @include desktopMin {
+      margin-right: 55px;
+    }
+  }
 
-//   a:hover {
-//     background: linear-gradient(92.09deg, #5e3928 -79.4%, #e4a16f 84.12%);
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     background-clip: text;
-//     border-bottom: 1px solid #e4a16f;
-//   }
-// `;
+  @include desktopMin {
+    font-weight: 600;
+    font-size: 20px;
+  }
 
-// const NavListItemLink = styled.a`
-//   /* padding: 5px; */
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 1;
-//   text-align: center;
-//   color: #ffffff;
-//   border-bottom: 1px solid transparent;
+  &:hover {
+    background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 1px solid #e4a16f;
+  }
+}
 
-//   ${size.desktop} {
-//     font-size: 20px;
-//   }
-// `;
+.list__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-// const ListButton = styled.ul`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// `;
+.item__button {
+  position: relative;
+  padding: 30px 10px 10px;
+  background-color: #fff;
+  color: #0b3f37;
 
-// const ItemButton = styled.li`
-//   position: relative;
-//   padding: 30px 10px 10px;
-//   background-color: #fff;
-//   color: #0b3f37;
+  &:first-child {
+    display: none;
 
-//   &:first-child {
-//     display: none;
+    @include tabletMin {
+      display: block;
+    }
+  }
 
-//     ${size.tabletMin} {
-//       display: block;
-//     }
-//   }
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
 
-//   &:not(:last-child) {
-//     margin-right: 15px;
-//   }
+  @include tabletMin {
+    .icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
 
-//   ${size.tabletMin} {
-//     .icon {
-//       width: 28px;
-//       height: 28px;
-//     }
-//   }
+  @include desktopMin {
+    padding-top: 45px;
+  }
+}
 
-//   ${size.desktop} {
-//     padding-top: 45px;
-//   }
-// `;
+.count {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  color: #e4a16f;
 
-// const Count = styled.span`
-//   position: absolute;
-//   top: 15px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 1;
-//   color: #e4a16f;
+  @include tabletMin {
+    top: 12px;
+    font-size: 20px;
+  }
 
-//   ${size.tabletMin} {
-//     top: 12px;
-//     font-size: 20px;
-//   }
+  @include desktopMin {
+    top: 20px;
+    font-size: 25px;
+  }
+}
 
-//   ${size.desktop} {
-//     top: 20px;
-//     font-size: 25px;
-//   }
-// `;
+.button {
+  position: relative;
+  padding: 8px;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
 
-// const Button = styled.button`
-//   position: relative;
-//   padding: 8px;
-//   color: #fff;
-//   background-color: transparent;
-//   cursor: pointer;
+  .icon {
+    position: relative;
+    z-index: 1;
+    stroke-width: 0.1;
+  }
 
-//   .icon {
-//     position: relative;
-//     z-index: 1;
-//     stroke-width: 0.1;
-//   }
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(100% + 15px);
+    background: linear-gradient(92deg, #5e3928 20%, #e4a16f 93%);
+    z-index: 0;
+  }
 
-//   &::after {
-//     position: absolute;
-//     content: '';
-//     top: 0;
-//     left: 0;
-//     height: 100%;
-//     width: calc(100% + 15px);
-//     background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-//     z-index: 0;
-//   }
-
-//   ${size.tabletMin} {
-//     display: none;
-//   }
-// `;
+  @include tabletMin {
+    display: none;
+  }
+}

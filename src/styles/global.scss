@@ -19,6 +19,7 @@ body {
   color: #031412;
   font-size: 16px;
   line-height: 1.4;
+  font-weight: 400;
 
   /* font-family: 'Playfair Display', serif; */
 }
@@ -28,11 +29,6 @@ input,
 textarea,
 select {
   font-size: inherit;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 img {
