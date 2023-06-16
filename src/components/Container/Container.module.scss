@@ -1,10 +1,13 @@
 .container {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 320px;
+  width: 100%;
+
+  @include mobileMin {
+    width: 320px;
+  }
 
   @include tabletMin {
     width: 768px;
