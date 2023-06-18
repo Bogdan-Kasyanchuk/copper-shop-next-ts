@@ -6,7 +6,7 @@
   width: 100%;
 
   @include mobileMin {
-    width: 320px;
+    width: 100%;
   }
 
   @include tabletMin {

@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 
 import styles from './Header.module.scss';
@@ -18,7 +16,39 @@ export default function Header() {
             </Link>
             <ul className={styles['nav__list-link']}>
               <li className={styles['nav__item-link']}>
-                <Link href='/catalog'>Каталог</Link>
+                <Link href='/catalog'>
+                  <div className={styles['nav__item-link-more-title']}>
+                    Каталог
+                    <Icon
+                      iconName='arrow'
+                      width='12px'
+                      height='12px'
+                      className={styles['nav__item-link-more-icon']}
+                    />
+                  </div>
+                </Link>
+                <div className={styles['nav__item-link-more-list-wrapper']}>
+                  <ul className={styles['nav__item-link-more-list']}>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/catalog/distillers'>Дистилятори</Link>
+                    </li>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/catalog/dishes'>Посуд</Link>
+                    </li>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/catalog/accessories'>Аксесуари</Link>
+                    </li>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/catalog/aquadistilators'>Аквадистилятори</Link>
+                    </li>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/catalog/individual-order'>Індивідуальне замовлення</Link>
+                    </li>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/catalog/discounts-offers'>Знижки та пропозиції</Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className={styles['nav__item-link']}>
                 <Link href='/about-us'>Про нас</Link>
@@ -36,17 +66,19 @@ export default function Header() {
                     className={styles['nav__item-link-more-icon']}
                   />
                 </div>
-                <ul className={styles['nav__item-link-more-list']}>
-                  <li className={styles['nav__item-link-more-item']}>
-                    <Link href='/delivery'>Доставка</Link>
-                  </li>
-                  <li className={styles['nav__item-link-more-item']}>
-                    <Link href='/payment'>Оплата</Link>
-                  </li>
-                  <li className={styles['nav__item-link-more-item']}>
-                    <Link href='/privacy-policy'>Політика конфіденційності</Link>
-                  </li>
-                </ul>
+                <div className={styles['nav__item-link-more-list-wrapper']}>
+                  <ul className={styles['nav__item-link-more-list']}>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/delivery'>Доставка</Link>
+                    </li>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/payment'>Оплата</Link>
+                    </li>
+                    <li className={styles['nav__item-link-more-item']}>
+                      <Link href='/privacy-policy'>Політика конфіденційності</Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className={styles['nav__item-link']}>
                 <Link href='/contacts'>Контакти</Link>
@@ -87,7 +119,7 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-          <button className={styles['btn-burger']} type='button' onClick={() => {}}>
+          <button className={styles['btn-burger']} type='button'>
             <Icon
               iconName='burger'
               width='20px'
