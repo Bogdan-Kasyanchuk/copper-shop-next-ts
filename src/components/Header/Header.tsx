@@ -108,7 +108,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className={styles['nav__item-btn']}>
-                <span className={styles.count}>1</span>
+                <span className={styles.count}>21</span>
                 <Link href='/basket'>
                   <Icon
                     iconName='basket-order'

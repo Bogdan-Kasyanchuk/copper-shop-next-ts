@@ -1,15 +1,17 @@
 .header {
-  // position: fixed;
-  // z-index: 900;
-  // top: 0;
-  // left: 0;
+  position: fixed;
+  z-index: 900;
   background: linear-gradient(285deg, #0b3f37 38%, #cb8d62 142%);
   width: 100%;
   color: #ffffff;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+
+  @include tabletMin {
+    padding-bottom: 25px;
+  }
 
   @include desktopMin {
-    padding-bottom: 35px;
+    padding-bottom: 30px;
   }
 }
 
@@ -17,6 +19,18 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.logo {
+  @include tabletMin {
+    width: 160px;
+    height: 43px;
+  }
+
+  @include desktopMin {
+    width: 175px;
+    height: 47px;
+  }
 }
 
 .nav {
@@ -28,7 +42,7 @@
   @include tabletMinMax {
     justify-content: center;
     flex-wrap: wrap;
-    row-gap: 30px;
+    row-gap: 25px;
   }
 
   &__list-link {
@@ -113,6 +127,11 @@
         line-height: 1.1;
         max-width: 230px;
         box-shadow: 2px 4px 5px 2px rgba(18, 18, 18, 0.3);
+        font-size: 14px;
+
+        @include desktopMin {
+          font-size: 18px;
+        }
       }
 
       &-item {
@@ -122,7 +141,7 @@
         color: #031412;
 
         &:hover {
-          background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+          background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
           color: #fff;
           -webkit-text-fill-color: #fff;
         }
@@ -143,62 +162,61 @@
 
   &__item-btn {
     position: relative;
-    padding: 30px 10px 10px;
     background-color: #fff;
     color: #0b3f37;
 
-    &:first-child {
-      display: none;
+    & a {
+      padding: 22px 8px 8px;
     }
 
     @include tabletMin {
-      padding-top: 35px;
+      & a {
+        padding: 34px 10px 10px;
+      }
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    @include desktopMin {
+      & a {
+        padding-top: 39px;
+      }
 
       &-icon {
         width: 28px;
         height: 28px;
       }
-
-      &:first-child {
-        display: block;
-      }
     }
 
-    @include desktopMin {
-      padding-top: 44px;
+    &:hover {
+      opacity: 0.75;
     }
-  }
-}
-
-.logo {
-  @include tabletMin {
-    width: 160px;
-    height: 43px;
-  }
-
-  @include desktopMin {
-    width: 175px;
-    height: 47px;
   }
 }
 
 .count {
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
-  color: #e4a16f;
+  background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  pointer-events: none;
 
   @include tabletMin {
-    top: 12px;
-    font-size: 20px;
+    top: 10px;
+    font-size: 18px;
   }
 
   @include desktopMin {
-    top: 16px;
-    font-size: 25px;
+    font-size: 22px;
   }
 }

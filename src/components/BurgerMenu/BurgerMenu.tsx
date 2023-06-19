@@ -6,6 +6,7 @@ import { useState } from 'react';
 import styles from './BurgerMenu.module.scss';
 import Container from '@/components/Container';
 import Icon from '@/components/Icon';
+import Logo from '@/components/Logo';
 import setBodyOverflow from '@/helpers/setBodyOverflow';
 
 export default function BurgerMenu() {
@@ -17,32 +18,48 @@ export default function BurgerMenu() {
   return (
     <>
       <button className={styles['btn-burger']} type='button' onClick={toggleBurgerMenu}>
-        <Icon iconName='burger' width='20px' height='20px' className={styles['btn-burger-icon']} />
+        <Icon iconName='burger' width='25px' height='25px' className={styles['btn-burger-icon']} />
       </button>
       {isBurgerMenuShow && (
         <div className={styles.backdrop}>
           <div className={styles['burger-menu']}>
             <Container>
-              <div className={styles.buttons}>
-                <ul className={styles['list-button-burger']}>
-                  <li className={styles['item-button-burger']}>
-                    <span className={styles.count}>1</span>
-                    <Icon iconName='heart' width='20px' height='20px' />
-                  </li>
-                  <li className={styles['item-button-burger']}>
-                    <Icon iconName='user' width='20px' height='20px' />
-                  </li>
-                  <li className={styles['item-button-burger']}>
-                    <span className={styles.count}>1</span>
-                    <Icon iconName='basket-order' width='20px' height='20px' />
-                  </li>
-                </ul>
+              <div className={styles.header}>
+                <nav className={styles.nav}>
+                  <Link href='/'>
+                    <Logo width={115} height={31} />
+                  </Link>
+                  <ul className={styles['nav__list-btn']}>
+                    <li className={styles['nav__item-btn']}>
+                      <span className={styles.count}>1</span>
+                      <Link href='/personal-area/wish-list'>
+                        <Icon iconName='heart' width='20px' height='20px' />
+                      </Link>
+                    </li>
+                    <li className={styles['nav__item-btn']}>
+                      <Link href='/personal-area/profile-detail'>
+                        <Icon iconName='user' width='20px' height='20px' />
+                      </Link>
+                    </li>
+                    <li className={styles['nav__item-btn']}>
+                      <span className={styles.count}>11</span>
+                      <Link href='/basket'>
+                        <Icon iconName='basket-order' width='20px' height='20px' />
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
                 <button
                   className={styles['button-burger']}
                   type='button'
                   onClick={toggleBurgerMenu}
                 >
-                  <Icon iconName='close' width='20px' height='20px' />
+                  <Icon
+                    iconName='close'
+                    width='19px'
+                    height='19px'
+                    className={styles['button-burger-icon']}
+                  />
                 </button>
               </div>
               <nav>
