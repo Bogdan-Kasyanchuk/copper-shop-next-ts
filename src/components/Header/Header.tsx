@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import styles from './Header.module.scss';
+import BurgerMenu from '@/components/BurgerMenu';
 import Container from '@/components/Container';
 import Icon from '@/components/Icon';
 import Logo from '@/components/Logo';
@@ -12,10 +13,10 @@ export default function Header() {
         <div className={styles.header__inner}>
           <nav className={styles.nav}>
             <Link href='/'>
-              <Logo width={115} height={31} className={styles.logo} />
+              <Logo width={115} height={31} priority className={styles.logo} />
             </Link>
             <ul className={styles['nav__list-link']}>
-              <li className={styles['nav__item-link']}>
+              <li className={`${styles['nav__item-link']} ${styles['nav__item-link-more']}`}>
                 <Link href='/catalog'>
                   <div className={styles['nav__item-link-more-title']}>
                     Каталог
@@ -119,14 +120,7 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-          <button className={styles['btn-burger']} type='button'>
-            <Icon
-              iconName='burger'
-              width='20px'
-              height='20px'
-              className={styles['btn-burger-icon']}
-            />
-          </button>
+          <BurgerMenu />
         </div>
       </Container>
     </header>

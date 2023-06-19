@@ -1,5 +1,5 @@
-export default interface ILogoProps {
+import { ImageProps } from 'next/image';
+
+export default interface ILogoProps extends Pick<ImageProps, 'width' | 'height' | 'priority'> {
   className?: string;
-  width: number;
-  height: number;
 }

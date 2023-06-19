@@ -202,33 +202,3 @@
     font-size: 25px;
   }
 }
-
-.btn-burger {
-  position: relative;
-  padding: 10px;
-  color: #fff;
-  background-color: transparent;
-  margin-left: 22px;
-  margin-right: -5px;
-
-  &-icon {
-    fill: #fff;
-    position: relative;
-    z-index: 1;
-    stroke-width: 0.1;
-  }
-
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: calc(100% + 10px);
-    background: linear-gradient(92deg, #5e3928 20%, #e4a16f 93%);
-  }
-
-  @include tabletMin {
-    display: none;
-  }
-}

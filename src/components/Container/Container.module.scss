@@ -10,16 +10,16 @@
   }
 
   @include tabletMin {
-    width: 768px;
+    width: $tablet-min;
     padding-left: 50px;
     padding-right: 50px;
   }
 
   @include laptopMin {
-    width: 1024px;
+    width: $laptop-min;
   }
 
   @include desktopMin {
-    width: 1440px;
+    width: $desktop-min;
   }
 }
