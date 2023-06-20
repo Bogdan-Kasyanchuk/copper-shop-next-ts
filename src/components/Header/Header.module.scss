@@ -3,7 +3,7 @@
   z-index: 900;
   background: linear-gradient(285deg, #0b3f37 38%, #cb8d62 142%);
   width: 100%;
-  color: #ffffff;
+  color: #fff;
   padding-bottom: 20px;
 
   @include tabletMin {
@@ -69,7 +69,6 @@
     @include tabletMin {
       font-size: 16px;
       line-height: 1;
-      color: #ffffff;
       border-bottom: 1px solid transparent;
     }
 

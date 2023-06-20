@@ -1,0 +1,14 @@
+.base {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include tabletMin {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include desktopMin {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

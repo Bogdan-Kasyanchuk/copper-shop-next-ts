@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::before,
 *::after {
@@ -16,7 +20,7 @@ body {
 }
 
 body {
-  color: #09d6be;
+  color: #031412;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;

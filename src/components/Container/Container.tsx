@@ -1,7 +1,5 @@
-import type { ReactNode } from 'react';
-
 import styles from './Container.module.scss';
 
-export default function Container({ children }: { children: ReactNode }) {
+export default function Container({ children }: TChildren) {
   return <div className={styles.container}>{children}</div>;
 }
