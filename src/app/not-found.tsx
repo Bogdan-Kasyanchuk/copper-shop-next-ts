@@ -1,7 +1,11 @@
-export const metadata = {
-  title: '404 | Not Found',
-};
+import Error_404 from '@/components/Error_404';
 
 export default function NotFound() {
-  return <h1>404 | Not Found</h1>;
+  return (
+    <div className='l-wrapper'>
+      <main>
+        <Error_404 />
+      </main>
+    </div>
+  );
 }

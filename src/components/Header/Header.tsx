@@ -2,14 +2,13 @@ import Link from 'next/link';
 
 import styles from './Header.module.scss';
 import BurgerMenu from '@/components/BurgerMenu';
-import Container from '@/components/Container';
 import Icon from '@/components/Icon';
 import Logo from '@/components/Logo';
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      <Container>
+      <div className='l-container'>
         <div className={styles.header__inner}>
           <nav className={styles.nav}>
             <Link href='/'>
@@ -122,7 +121,7 @@ export default function Header() {
           </nav>
           <BurgerMenu />
         </div>
-      </Container>
+      </div>
     </header>
   );
 }

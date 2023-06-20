@@ -1,12 +1,10 @@
-import Container from '@/components/Container';
-
 export const metadata = {
   title: 'Home',
 };
 
 export default function Home() {
   return (
-    <Container>
+    <div className='l-container'>
       <h1>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit explicabo illum,
         rerum tenetur nam itaque voluptatem non reiciendis totam vitae adipisci, sint
@@ -96,6 +94,6 @@ export default function Home() {
         iste illum. Quos vero enim odio mollitia suscipit nihil eum quibusdam voluptates, aperiam
         nisi quis.
       </p>
-    </Container>
+    </div>
   );
 }

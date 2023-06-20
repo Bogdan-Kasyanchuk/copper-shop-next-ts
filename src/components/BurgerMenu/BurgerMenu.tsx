@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 import styles from './BurgerMenu.module.scss';
-import Container from '@/components/Container';
 import Icon from '@/components/Icon';
 import Logo from '@/components/Logo';
 import setBodyOverflow from '@/helpers/setBodyOverflow';
@@ -23,7 +22,7 @@ export default function BurgerMenu() {
       {isBurgerMenuShow && (
         <div className={styles.backdrop}>
           <div className={styles['burger-menu']}>
-            <Container>
+            <div className='l-container'>
               <div className={styles.header}>
                 <nav className={styles.nav}>
                   <Link href='/'>
@@ -130,7 +129,7 @@ export default function BurgerMenu() {
                   </li>
                 </ul>
               </nav>
-            </Container>
+            </div>
           </div>
         </div>
       )}

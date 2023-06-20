@@ -1,11 +1,9 @@
-import Container from '@/components/Container';
-
 export default function HeaderMini() {
   return (
     <header>
-      <Container>
+      <div className='l-container'>
         <div>HeaderMini</div>
-      </Container>
+      </div>
     </header>
   );
 }

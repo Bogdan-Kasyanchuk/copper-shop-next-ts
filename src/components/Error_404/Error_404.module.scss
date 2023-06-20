@@ -1,0 +1,57 @@
+.error-404 {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  height: 100%;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__code {
+    font-size: 7.5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: rgb(206, 212, 218);
+
+    @include tabletMin {
+      font-size: 13.75rem;
+    }
+  }
+
+  &__text {
+  }
+
+  &__title {
+    line-height: 1.3;
+    margin: 0px 0px 1.5rem;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+
+    @include tabletMin {
+      font-size: 2.375rem;
+    }
+  }
+
+  &__desc {
+    color: rgb(134, 142, 150);
+    line-height: 1.55;
+    font-size: 1.125rem;
+    max-width: 31.25rem;
+  }
+
+  &__go-home {
+    padding: 0px 1.625rem;
+    height: 3.125rem;
+    width: auto;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.125rem;
+    background-color: rgb(206, 212, 218);
+    color: rgb(44, 46, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
