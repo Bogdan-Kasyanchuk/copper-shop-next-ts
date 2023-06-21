@@ -1,12 +1,13 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import Wrapper from '@/components/Wrapper';
 
 export default function Layout({ children }: TChildren) {
   return (
-    <div className='l-wrapper'>
+    <Wrapper>
       <Header />
       <main>{children}</main>
       <Footer />
-    </div>
+    </Wrapper>
   );
 }

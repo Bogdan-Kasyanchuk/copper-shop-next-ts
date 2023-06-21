@@ -1,9 +1,11 @@
+import Container from '@/components/Container';
+
 export default function Footer() {
   return (
     <footer>
-      <div className='l-container'>
+      <Container>
         <div className='bg-red-300'>Footer</div>
-      </div>
+      </Container>
     </footer>
   );
 }

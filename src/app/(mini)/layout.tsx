@@ -1,12 +1,13 @@
 import FooterMini from '@/components/Footer/FooterMini';
 import HeaderMini from '@/components/Header/HeaderMini';
+import Wrapper from '@/components/Wrapper';
 
 export default function Layout({ children }: TChildren) {
   return (
-    <div className='l-wrapper'>
+    <Wrapper>
       <HeaderMini />
       <main>{children}</main>
       <FooterMini />
-    </div>
+    </Wrapper>
   );
 }

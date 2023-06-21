@@ -2,14 +2,15 @@ import Link from 'next/link';
 
 import styles from './Header.module.scss';
 import BurgerMenu from '@/components/BurgerMenu';
+import Container from '@/components/Container';
 import Icon from '@/components/Icon';
 import Logo from '@/components/Logo';
 
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <div className='l-container'>
-        <div className={styles.header__inner}>
+    <header className={styles.base}>
+      <Container>
+        <div className={styles.inner}>
           <nav className={styles.nav}>
             <Link href='/'>
               <Logo width={115} height={31} priority className={styles.logo} />
@@ -27,24 +28,24 @@ export default function Header() {
                     />
                   </div>
                 </Link>
-                <div className={styles['nav__item-link-more-list-wrapper']}>
-                  <ul className={styles['nav__item-link-more-list']}>
-                    <li className={styles['nav__item-link-more-item']}>
+                <div className={styles['nav__item-link-sublist-wrapper']}>
+                  <ul className={styles['nav__item-link-sublist']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/catalog/distillers'>Дистилятори</Link>
                     </li>
-                    <li className={styles['nav__item-link-more-item']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/catalog/dishes'>Посуд</Link>
                     </li>
-                    <li className={styles['nav__item-link-more-item']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/catalog/accessories'>Аксесуари</Link>
                     </li>
-                    <li className={styles['nav__item-link-more-item']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/catalog/aquadistilators'>Аквадистилятори</Link>
                     </li>
-                    <li className={styles['nav__item-link-more-item']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/catalog/individual-order'>Індивідуальне замовлення</Link>
                     </li>
-                    <li className={styles['nav__item-link-more-item']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/catalog/discounts-offers'>Знижки та пропозиції</Link>
                     </li>
                   </ul>
@@ -66,15 +67,15 @@ export default function Header() {
                     className={styles['nav__item-link-more-icon']}
                   />
                 </div>
-                <div className={styles['nav__item-link-more-list-wrapper']}>
-                  <ul className={styles['nav__item-link-more-list']}>
-                    <li className={styles['nav__item-link-more-item']}>
+                <div className={styles['nav__item-link-sublist-wrapper']}>
+                  <ul className={styles['nav__item-link-sublist']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/delivery'>Доставка</Link>
                     </li>
-                    <li className={styles['nav__item-link-more-item']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/payment'>Оплата</Link>
                     </li>
-                    <li className={styles['nav__item-link-more-item']}>
+                    <li className={styles['nav__item-link-subitem']}>
                       <Link href='/privacy-policy'>Політика конфіденційності</Link>
                     </li>
                   </ul>
@@ -86,7 +87,7 @@ export default function Header() {
             </ul>
             <ul className={styles['nav__list-btn']}>
               <li className={styles['nav__item-btn']}>
-                <span className={styles.count}>1</span>
+                <span className={styles['nav__item-btn-count']}>1</span>
                 <Link href='/personal-area/wish-list'>
                   <Icon
                     iconName='heart'
@@ -107,7 +108,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className={styles['nav__item-btn']}>
-                <span className={styles.count}>21</span>
+                <span className={styles['nav__item-btn-count']}>21</span>
                 <Link href='/basket'>
                   <Icon
                     iconName='basket-order'
@@ -121,7 +122,7 @@ export default function Header() {
           </nav>
           <BurgerMenu />
         </div>
-      </div>
+      </Container>
     </header>
   );
 }

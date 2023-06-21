@@ -1,4 +1,4 @@
-.header {
+.base {
   position: fixed;
   z-index: 900;
   background: linear-gradient(285deg, #0b3f37 38%, #cb8d62 142%);
@@ -7,30 +7,18 @@
   padding-bottom: 20px;
 
   @include tabletMin {
-    padding-bottom: 25px;
+    padding-bottom: 23px;
   }
 
   @include desktopMin {
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 }
 
-.header__inner {
+.inner {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-}
-
-.logo {
-  @include tabletMin {
-    width: 160px;
-    height: 43px;
-  }
-
-  @include desktopMin {
-    width: 175px;
-    height: 47px;
-  }
 }
 
 .nav {
@@ -42,7 +30,19 @@
   @include tabletMinMax {
     justify-content: center;
     flex-wrap: wrap;
-    row-gap: 25px;
+    row-gap: 23px;
+  }
+
+  .logo {
+    @include tabletMin {
+      width: 160px;
+      height: 43px;
+    }
+
+    @include desktopMin {
+      width: 175px;
+      height: 47px;
+    }
   }
 
   &__list-link {
@@ -77,6 +77,10 @@
       font-size: 20px;
     }
 
+    & a {
+      padding: 2px;
+    }
+
     &:hover {
       background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
       -webkit-background-clip: text;
@@ -92,6 +96,7 @@
       &-title {
         display: flex;
         align-items: center;
+        padding: 2px;
       }
 
       &-icon {
@@ -109,41 +114,41 @@
           fill: #e4a16f;
         }
       }
+    }
 
-      &-list-wrapper {
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        padding-top: 10px;
+    &-sublist-wrapper {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      padding-top: 10px;
 
-        .nav__item-link:hover & {
-          opacity: 1;
-          visibility: visible;
-        }
+      .nav__item-link:hover & {
+        opacity: 1;
+        visibility: visible;
       }
+    }
 
-      &-list {
-        line-height: 1.1;
-        max-width: 230px;
-        box-shadow: 2px 4px 5px 2px rgba(18, 18, 18, 0.3);
-        font-size: 14px;
+    &-sublist {
+      line-height: 1.1;
+      max-width: 230px;
+      box-shadow: 2px 4px 5px 2px rgba(18, 18, 18, 0.3);
+      font-size: 14px;
 
-        @include desktopMin {
-          font-size: 18px;
-        }
+      @include desktopMin {
+        font-size: 18px;
       }
+    }
 
-      &-item {
-        padding: 8px 15px;
-        background: #fff;
-        -webkit-text-fill-color: #031412;
-        color: #031412;
+    &-subitem {
+      padding: 8px 15px;
+      background: #fff;
+      -webkit-text-fill-color: #031412;
+      color: #031412;
 
-        &:hover {
-          background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
-          color: #fff;
-          -webkit-text-fill-color: #fff;
-        }
+      &:hover {
+        background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
+        color: #fff;
+        -webkit-text-fill-color: #fff;
       }
     }
   }
@@ -166,25 +171,47 @@
 
     & a {
       padding: 22px 8px 8px;
-    }
 
-    @include tabletMin {
-      & a {
+      @include tabletMin {
         padding: 34px 10px 10px;
       }
 
-      &-icon {
-        width: 24px;
-        height: 24px;
+      @include desktopMin {
+        padding-top: 39px;
       }
     }
 
-    @include desktopMin {
-      & a {
-        padding-top: 39px;
+    &-count {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;
+      background: linear-gradient(92deg, #5e3928 20%, #e4a16f 93%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      pointer-events: none;
+
+      @include tabletMin {
+        top: 10px;
+        font-size: 18px;
       }
 
-      &-icon {
+      @include desktopMin {
+        font-size: 22px;
+      }
+    }
+
+    &-icon {
+      @include tabletMin {
+        width: 24px;
+        height: 24px;
+      }
+
+      @include desktopMin {
         width: 28px;
         height: 28px;
       }
@@ -193,29 +220,5 @@
     &:hover {
       opacity: 0.75;
     }
-  }
-}
-
-.count {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1;
-  background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  pointer-events: none;
-
-  @include tabletMin {
-    top: 10px;
-    font-size: 18px;
-  }
-
-  @include desktopMin {
-    font-size: 22px;
   }
 }

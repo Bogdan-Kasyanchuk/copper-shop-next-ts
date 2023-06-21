@@ -1,57 +1,84 @@
 .error-404 {
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
   height: 100%;
   display: flex;
-  gap: 2.5rem;
+  gap: 40px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  max-width: 420px;
+
+  @include tabletMin {
+    max-width: 700px;
+  }
 
   &__code {
-    font-size: 7.5rem;
-    font-weight: 900;
-    line-height: 1;
-    color: rgb(206, 212, 218);
+    background: linear-gradient(92deg, #5e3928 20%, #e4a16f 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 0.8;
 
     @include tabletMin {
-      font-size: 13.75rem;
+      font-size: 240px;
+    }
+
+    @include desktopMin {
+      font-size: 300px;
     }
   }
 
-  &__text {
-  }
-
   &__title {
-    line-height: 1.3;
-    margin: 0px 0px 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
     text-align: center;
-    font-weight: 900;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 28px;
 
     @include tabletMin {
-      font-size: 2.375rem;
+      font-size: 38px;
+    }
+
+    @include desktopMin {
+      font-size: 46px;
     }
   }
 
   &__desc {
-    color: rgb(134, 142, 150);
-    line-height: 1.55;
-    font-size: 1.125rem;
-    max-width: 31.25rem;
+    color: #a1a1a1;
+    font-size: 18px;
+
+    @include tabletMin {
+      font-size: 26px;
+    }
+
+    @include desktopMin {
+      font-size: 30px;
+    }
   }
 
   &__go-home {
-    padding: 0px 1.625rem;
-    height: 3.125rem;
-    width: auto;
     font-weight: 600;
     line-height: 1;
-    font-size: 1.125rem;
-    background-color: rgb(206, 212, 218);
-    color: rgb(44, 46, 51);
+    font-size: 20px;
+    background: linear-gradient(92deg, #5e3928 20%, #e4a16f 93%);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    & a {
+      padding: 15px 40px;
+    }
   }
 }
