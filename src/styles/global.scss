@@ -25,6 +25,34 @@ body {
 main {
   display: flex;
   flex: 1 1 auto;
+
+  &.main,
+  &.mini {
+    padding-top: 70px;
+  }
+
+  &.main {
+    @include tabletMin {
+      padding-top: 139px;
+    }
+
+    @include laptopMin {
+      padding-top: 91px;
+    }
+  }
+
+  &.mini {
+    @include tabletMin {
+      padding-top: 91px;
+    }
+  }
+
+  &.main,
+  &.mini {
+    @include desktopMin {
+      padding-top: 105px;
+    }
+  }
 }
 
 button,

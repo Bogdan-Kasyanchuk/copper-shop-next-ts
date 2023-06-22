@@ -1,3 +1,4 @@
+import styles from './Icon.module.scss';
 import type { TIconProps } from './TIconProps';
 
 export default function Icon({
@@ -9,7 +10,13 @@ export default function Icon({
   stroke = 'currentColor',
 }: TIconProps) {
   return (
-    <svg className={className} width={width} height={height} fill={fill} stroke={stroke}>
+    <svg
+      className={`${styles.base} ${className}`}
+      width={width}
+      height={height}
+      fill={fill}
+      stroke={stroke}
+    >
       <use xlinkHref={`./sprite.svg#${iconName}`} />
     </svg>
   );

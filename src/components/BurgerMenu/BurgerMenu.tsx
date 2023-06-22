@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import type { MouseEvent } from 'react';
 
 import styles from './BurgerMenu.module.scss';
 import Container from '@/components/Container';
@@ -10,19 +11,26 @@ import Logo from '@/components/Logo';
 import setBodyOverflow from '@/helpers/setBodyOverflow';
 
 export default function BurgerMenu() {
-  const [isBurgerMenuShow, setIsBurgerMenuShow] = useState<boolean>(false);
+  const [isShowBurgerMenu, setIsShowBurgerMenu] = useState<boolean>(false);
   const toggleBurgerMenu = () => {
-    setIsBurgerMenuShow(!isBurgerMenuShow);
-    setBodyOverflow(isBurgerMenuShow);
+    setIsShowBurgerMenu(!isShowBurgerMenu);
+    setBodyOverflow(isShowBurgerMenu);
+  };
+
+  const nundlerClick = (e: MouseEvent<HTMLDivElement>) => {
+    if ((e.target as HTMLElement).nodeName !== 'A') {
+      return;
+    }
+    toggleBurgerMenu();
   };
   return (
     <>
       <button className={styles['btn-burger']} type='button' onClick={toggleBurgerMenu}>
         <Icon iconName='burger' width='25px' height='25px' className={styles['btn-burger-icon']} />
       </button>
-      {isBurgerMenuShow && (
+      {isShowBurgerMenu && (
         <div className={styles.backdrop}>
-          <div className={styles.base}>
+          <div className={styles.base} onClick={nundlerClick}>
             <Container>
               <div className={styles.header}>
                 <nav className={styles.nav}>

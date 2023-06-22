@@ -1,9 +1,10 @@
 import Image from 'next/image';
 
+import styles from './Logo.module.scss';
 import type { TLogoProps } from './TLogoProps';
 import logoImg from '@/assets/icon-png/logo.png';
 
-export default function Logo({ width, height, priority, className }: TLogoProps) {
+export default function Logo({ width, height, priority, className = '' }: TLogoProps) {
   return (
     <Image
       src={logoImg}
@@ -11,7 +12,7 @@ export default function Logo({ width, height, priority, className }: TLogoProps)
       width={width}
       height={height}
       priority={priority}
-      className={className}
+      className={`${styles.base} ${className}`}
     />
   );
 }

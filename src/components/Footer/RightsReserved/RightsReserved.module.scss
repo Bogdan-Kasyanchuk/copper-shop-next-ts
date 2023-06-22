@@ -1,0 +1,9 @@
+.base {
+  font-weight: 400;
+  font-size: 12px;
+  color: #a1a1a1;
+
+  @include tabletMin {
+    font-size: 14px;
+  }
+}

@@ -6,7 +6,7 @@ export default function Layout({ children }: TChildren) {
   return (
     <Wrapper>
       <HeaderMini />
-      <main>{children}</main>
+      <main className='mini'>{children}</main>
       <FooterMini />
     </Wrapper>
   );

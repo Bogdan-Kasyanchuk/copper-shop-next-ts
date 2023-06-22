@@ -1,12 +1,27 @@
 .base {
+  position: fixed;
+  z-index: 900;
   background: linear-gradient(285deg, #0b3f37 38%, #cb8d62 142%);
+  width: 100%;
   color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include tabletMin {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @include desktopMin {
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
 }
 
 .inner {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   .logo {
     @include tabletMin {
@@ -18,9 +33,5 @@
       width: 175px;
       height: 47px;
     }
-  }
-
-  .rights-reserved {
-    margin-top: 15px;
   }
 }

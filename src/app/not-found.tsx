@@ -1,4 +1,3 @@
-import Container from '@/components/Container';
 import Error_404 from '@/components/Error_404';
 
 export default function NotFound() {

@@ -80,7 +80,7 @@
     background-color: #fff;
     color: #0b3f37;
 
-    & a {
+    a {
       padding: 22px 8px 8px;
     }
 
@@ -141,7 +141,7 @@
     color: #fff;
     text-align: center;
 
-    & a {
+    a {
       &:hover {
         opacity: 0.75;
       }
@@ -153,7 +153,7 @@
     font-size: 28px;
     line-height: 1.1;
 
-    & a {
+    a {
       padding-top: 10px;
       padding-bottom: 10px;
       border-bottom: 2px solid #fff;
@@ -181,7 +181,7 @@
       font-weight: 400;
       font-size: 22px;
 
-      & a {
+      a {
         border-bottom: none;
       }
     }
