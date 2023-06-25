@@ -22,16 +22,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  .logo {
-    @include tabletMin {
-      width: 160px;
-      height: 43px;
-    }
+.logo {
+  @include tabletMin {
+    width: 160px;
+    height: 43px;
+  }
 
-    @include desktopMin {
-      width: 175px;
-      height: 47px;
-    }
+  @include desktopMin {
+    width: 175px;
+    height: 47px;
   }
 }

@@ -1,0 +1,133 @@
+.base {
+  position: relative;
+  background: linear-gradient(285deg, #0b3f37 38%, #cb8d62 142%);
+  color: #fff;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include tabletMin {
+    padding-right: 140px;
+  }
+
+  @include laptopMin {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.rights-reserved {
+  margin-top: 20px;
+
+  @include laptopMin {
+    max-width: 155px;
+  }
+}
+
+.privacy-policy {
+  font-size: 12px;
+  text-decoration-line: underline;
+  margin-top: 6px;
+
+  @include tabletMin {
+    font-size: 14px;
+  }
+
+  @include laptopMin {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+
+  @include tabletMin {
+    gap: 50px;
+  }
+
+  @include desktopMin {
+    gap: 100px;
+  }
+
+  &__contacts {
+    max-width: 165px;
+
+    @include mobileMax {
+      margin-right: 90px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px;
+
+    @include tabletMin {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    .nav__contacts & {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    @include tabletMin {
+      font-size: 16px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &:hover {
+      background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav__nav &,
+    .nav__catalog & {
+      position: relative;
+      width: fit-content;
+      line-height: 1;
+      a {
+        &:after {
+          position: absolute;
+          content: '';
+          opacity: 0;
+          bottom: -1px;
+          left: -2px;
+          width: calc(100% + 4px);
+          height: 1px;
+          background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
+        }
+
+        &:hover {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,11 +7,11 @@
   padding-bottom: 20px;
 
   @include tabletMin {
-    padding-bottom: 23px;
+    padding-bottom: 25px;
   }
 
   @include desktopMin {
-    padding-bottom: 28px;
+    padding-bottom: 30px;
   }
 }
 
@@ -19,6 +19,18 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.logo {
+  @include tabletMin {
+    width: 160px;
+    height: 43px;
+  }
+
+  @include desktopMin {
+    width: 175px;
+    height: 47px;
+  }
 }
 
 .nav {
@@ -30,19 +42,7 @@
   @include tabletMinMax {
     justify-content: center;
     flex-wrap: wrap;
-    row-gap: 23px;
-  }
-
-  .logo {
-    @include tabletMin {
-      width: 160px;
-      height: 43px;
-    }
-
-    @include desktopMin {
-      width: 175px;
-      height: 47px;
-    }
+    row-gap: 25px;
   }
 
   &__list-link {
@@ -66,10 +66,12 @@
   }
 
   &__item-link {
+    position: relative;
+    width: fit-content;
+
     @include tabletMin {
       font-size: 16px;
       line-height: 1;
-      border-bottom: 1px solid transparent;
     }
 
     @include desktopMin {
@@ -77,16 +79,30 @@
       font-size: 20px;
     }
 
-    a {
-      padding: 2px;
-    }
-
     &:hover {
       background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      border-bottom: 1px solid #e4a16f;
+    }
+
+    a {
+      &:after {
+        position: absolute;
+        content: '';
+        opacity: 0;
+        bottom: -1px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: 1px;
+        background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
     }
 
     &-more {
@@ -96,7 +112,6 @@
       &-title {
         display: flex;
         align-items: center;
-        padding: 2px;
       }
 
       &-icon {
@@ -112,6 +127,23 @@
 
         .nav__item-link:hover & {
           fill: #e4a16f;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        opacity: 0;
+        bottom: -1px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: 1px;
+        background: linear-gradient(92deg, #5e3928 -79%, #e4a16f 84%);
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
         }
       }
     }

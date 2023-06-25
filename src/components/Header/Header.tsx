@@ -18,7 +18,7 @@ export default function Header() {
             <ul className={styles['nav__list-link']}>
               <li className={`${styles['nav__item-link']} ${styles['nav__item-link-more']}`}>
                 <Link href='/catalog'>
-                  <div className={styles['nav__item-link-more-title']}>
+                  <p className={styles['nav__item-link-more-title']}>
                     Каталог
                     <Icon
                       iconName='arrow'
@@ -26,7 +26,7 @@ export default function Header() {
                       height='12px'
                       className={styles['nav__item-link-more-icon']}
                     />
-                  </div>
+                  </p>
                 </Link>
                 <div className={styles['nav__item-link-sublist-wrapper']}>
                   <ul className={styles['nav__item-link-sublist']}>
@@ -58,7 +58,7 @@ export default function Header() {
                 <Link href='/news'>Новини</Link>
               </li>
               <li className={`${styles['nav__item-link']} ${styles['nav__item-link-more']}`}>
-                <div className={styles['nav__item-link-more-title']}>
+                <p className={styles['nav__item-link-more-title']}>
                   Сервіс
                   <Icon
                     iconName='arrow'
@@ -66,7 +66,7 @@ export default function Header() {
                     height='12px'
                     className={styles['nav__item-link-more-icon']}
                   />
-                </div>
+                </p>
                 <div className={styles['nav__item-link-sublist-wrapper']}>
                   <ul className={styles['nav__item-link-sublist']}>
                     <li className={styles['nav__item-link-subitem']}>

@@ -1,4 +1,5 @@
 .base {
+  position: relative;
   background: linear-gradient(285deg, #0b3f37 38%, #cb8d62 142%);
   color: #fff;
 }
@@ -7,20 +8,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  .logo {
-    @include tabletMin {
-      width: 160px;
-      height: 43px;
-    }
-
-    @include desktopMin {
-      width: 175px;
-      height: 47px;
-    }
+.logo {
+  @include tabletMin {
+    width: 160px;
+    height: 43px;
   }
 
-  .rights-reserved {
-    margin-top: 15px;
+  @include desktopMin {
+    width: 175px;
+    height: 47px;
   }
+}
+
+.rights-reserved {
+  margin-top: 15px;
 }
