@@ -3,6 +3,7 @@ export type TButtonProps = TChildren & {
   classNameBase?: string;
   classNameInner?: string;
   space?: string;
+  align?: 'start' | 'center' | 'end';
   variant?: 'outline-black' | 'outline-gray' | 'solid-green' | 'solid-orange';
   color?: 'black' | 'white' | 'gray';
   onClick?: () => void;

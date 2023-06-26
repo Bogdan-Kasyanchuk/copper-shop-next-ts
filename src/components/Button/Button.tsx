@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from 'clsx';
 
 import styles from './Button.module.scss';
@@ -9,6 +11,7 @@ export default function Button({
   classNameBase,
   classNameInner,
   space = '24px',
+  align = 'center',
   variant = 'solid-orange',
   color = 'white',
   onClick,
@@ -21,6 +24,7 @@ export default function Button({
       className={clsx(
         styles.base,
         classNameBase,
+        align !== 'center' && styles[align],
         variant !== 'solid-orange' && styles[variant],
         color !== 'white' && styles[color]
       )}

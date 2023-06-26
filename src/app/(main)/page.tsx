@@ -1,5 +1,6 @@
 import Button from '@/components/Button';
 import Container from '@/components/Container';
+import Icon from '@/components/Icon';
 import Title from '@/components/Title';
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function Home() {
         rerum tenetur nam itaque voluptatem non reiciendis totam vitae adipisci, sint
       </h1>
       <div className='grid gap-5'>
-        <Button>Button</Button>
+        <Button align='start' leftIcon={<Icon iconName='heart' width='20px' height='20px' />}>
+          Button
+        </Button>
         <Button variant='solid-green' space='10px'>
           Button
         </Button>
@@ -27,8 +30,11 @@ export default function Home() {
       </div>
       <div className='grid gap-5'>
         <Title>h2-h2</Title>
-        <Title as='h3' align='center'>
+        <Title as='h3' variant='h3' align='center'>
           h3-h3
+        </Title>
+        <Title as='h4' variant='h4' align='center'>
+          h4-h4
         </Title>
       </div>
     </Container>
