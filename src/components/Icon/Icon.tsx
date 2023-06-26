@@ -1,9 +1,11 @@
+import clsx from 'clsx';
+
 import styles from './Icon.module.scss';
 import type { TIconProps } from './TIconProps';
 
 export default function Icon({
   iconName,
-  className = '',
+  className,
   width = '24px',
   height = '24px',
   fill = 'currentColor',
@@ -11,7 +13,7 @@ export default function Icon({
 }: TIconProps) {
   return (
     <svg
-      className={`${styles.base} ${className}`}
+      className={clsx(styles.base, className)}
       width={width}
       height={height}
       fill={fill}

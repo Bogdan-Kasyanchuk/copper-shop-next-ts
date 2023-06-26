@@ -1,16 +1,50 @@
-// const Button = styled.button`
-//   display: block;
-//   width: 100%;
-//   padding: 16px;
-//   font-weight: 700;
-//   font-size: 18px;
-//   line-height: 1;
-//   color: #fff;
-//   background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-//   ${size.tabletMin} {
-//     margin-left: auto;
-//     margin-right: auto;
-//     width: initial;
-//     min-width: 330px;
-//   }
-// `;
+.base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+  background: linear-gradient(92deg, #5e3928 20%, #e4a16f 93%);
+
+  @include tabletMin {
+    margin-left: auto;
+    margin-right: auto;
+    width: initial;
+    min-width: 250px;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.solid-green {
+  background: linear-gradient(285deg, #0b3f37 38%, #cb8d62 142%);
+}
+
+.outline-gray,
+.outline-black {
+  padding: 14px;
+  background: transparent;
+  border: 1px solid;
+}
+
+.outline-black {
+  border-color: #031412;
+}
+
+.outline-gray {
+  border-color: #a1a1a1;
+}
+
+.gray {
+  color: #a1a1a1;
+}
+
+.black {
+  color: #031412;
+}

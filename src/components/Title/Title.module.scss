@@ -1,0 +1,31 @@
+.base {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-transform: uppercase;
+
+  @include tabletMin {
+    margin-bottom: 30px;
+    font-size: 60px;
+    line-height: 1.1;
+  }
+
+  @include desktopMin {
+    margin-bottom: 50px;
+    font-size: 100px;
+  }
+}
+
+.h3 {
+  margin-bottom: 25px;
+  font-size: 24px;
+
+  @include tabletMin {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+
+  @include desktopMin {
+    margin-bottom: 50px;
+    font-size: 50px;
+  }
+}
