@@ -8,6 +8,7 @@ declare global {
   type TBoxProps = {
     children: React.ReactNode;
     className?: string;
+    id?: string;
     as?: React.ElementType;
   };
 }

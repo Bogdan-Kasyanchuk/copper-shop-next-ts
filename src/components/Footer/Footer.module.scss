@@ -9,11 +9,11 @@
   flex-direction: column;
   gap: 30px;
 
-  @include tabletMin {
+  @include mdMin {
     padding-right: 140px;
   }
 
-  @include laptopMin {
+  @include lgMin {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -22,7 +22,7 @@
 .rights-reserved {
   margin-top: 20px;
 
-  @include laptopMin {
+  @include lgMin {
     max-width: 155px;
   }
 }
@@ -32,11 +32,11 @@
   text-decoration-line: underline;
   margin-top: 6px;
 
-  @include tabletMin {
+  @include mdMin {
     font-size: 14px;
   }
 
-  @include laptopMin {
+  @include lgMin {
     margin-top: 20px;
   }
 
@@ -51,18 +51,18 @@
   justify-content: space-between;
   gap: 30px;
 
-  @include tabletMin {
+  @include mdMin {
     gap: 50px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     gap: 100px;
   }
 
   &__contacts {
     max-width: 165px;
 
-    @include mobileMax {
+    @include sxMax {
       margin-right: 90px;
     }
   }
@@ -72,7 +72,7 @@
     font-size: 16px;
     margin-bottom: 16px;
 
-    @include tabletMin {
+    @include mdMin {
       font-size: 18px;
     }
   }
@@ -90,7 +90,7 @@
       margin-bottom: 14px;
     }
 
-    @include tabletMin {
+    @include mdMin {
       font-size: 16px;
 
       &:not(:last-child) {

@@ -6,11 +6,11 @@
   color: #fff;
   padding-bottom: 20px;
 
-  @include tabletMin {
+  @include mdMin {
     padding-bottom: 25px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     padding-bottom: 30px;
   }
 }
@@ -22,12 +22,12 @@
 }
 
 .logo {
-  @include tabletMin {
+  @include mdMin {
     width: 160px;
     height: 43px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     width: 175px;
     height: 47px;
   }
@@ -39,7 +39,7 @@
   align-items: flex-end;
   flex-grow: 1;
 
-  @include tabletMinMax {
+  @include md {
     justify-content: center;
     flex-wrap: wrap;
     row-gap: 25px;
@@ -48,18 +48,18 @@
   &__list-link {
     display: none;
 
-    @include tabletMin {
+    @include mdMin {
       display: flex;
       justify-content: space-between;
       align-items: center;
       column-gap: 55px;
     }
 
-    @include tabletMinMax {
+    @include md {
       order: 3;
     }
 
-    @include laptopMinMax {
+    @include lg {
       column-gap: 35px;
       order: initial;
     }
@@ -69,12 +69,12 @@
     position: relative;
     width: fit-content;
 
-    @include tabletMin {
+    @include mdMin {
       font-size: 16px;
       line-height: 1;
     }
 
-    @include desktopMin {
+    @include xlMin {
       font-weight: 600;
       font-size: 20px;
     }
@@ -120,7 +120,7 @@
         stroke-width: 0.1;
         margin-top: 2px;
 
-        @include desktopMin {
+        @include xlMin {
           width: 16px;
           height: 16px;
         }
@@ -166,7 +166,7 @@
       box-shadow: 2px 4px 5px 2px rgba(18, 18, 18, 0.3);
       font-size: 14px;
 
-      @include desktopMin {
+      @include xlMin {
         font-size: 18px;
       }
     }
@@ -191,7 +191,7 @@
     align-items: center;
     column-gap: 15px;
 
-    @include tabletMinMax {
+    @include md {
       margin-left: auto;
     }
   }
@@ -204,11 +204,11 @@
     a {
       padding: 22px 8px 8px;
 
-      @include tabletMin {
+      @include mdMin {
         padding: 34px 10px 10px;
       }
 
-      @include desktopMin {
+      @include xlMin {
         padding-top: 39px;
       }
     }
@@ -227,23 +227,23 @@
       background-clip: text;
       pointer-events: none;
 
-      @include tabletMin {
+      @include mdMin {
         top: 10px;
         font-size: 18px;
       }
 
-      @include desktopMin {
+      @include xlMin {
         font-size: 22px;
       }
     }
 
     &-icon {
-      @include tabletMin {
+      @include mdMin {
         width: 24px;
         height: 24px;
       }
 
-      @include desktopMin {
+      @include xlMin {
         width: 28px;
         height: 28px;
       }

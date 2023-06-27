@@ -4,7 +4,7 @@
   line-height: 1.2;
   text-transform: uppercase;
 
-  @include tabletMin {
+  @include mdMin {
     margin-bottom: 30px;
   }
 }
@@ -13,12 +13,12 @@
   margin-bottom: 30px;
   font-size: 30px;
 
-  @include tabletMin {
+  @include mdMin {
     margin-bottom: 40px;
     font-size: 60px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     margin-bottom: 50px;
     font-size: 100px;
   }
@@ -27,11 +27,11 @@
 .h3 {
   font-size: 24px;
 
-  @include tabletMin {
+  @include mdMin {
     font-size: 40px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     margin-bottom: 40px;
     font-size: 50px;
   }
@@ -40,12 +40,12 @@
 .h4 {
   font-size: 20px;
 
-  @include tabletMin {
+  @include mdMin {
     margin-bottom: 25px;
     font-size: 24px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     margin-bottom: 30px;
     font-size: 28px;
   }

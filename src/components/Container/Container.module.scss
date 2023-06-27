@@ -5,22 +5,22 @@
   padding-right: 15px;
   width: 100%;
 
-  @include mobileMin {
+  @include sxMin {
     width: 100%;
   }
 
-  @include tabletMin {
-    width: $tablet-min;
+  @include mdMin {
+    width: $md-min;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  @include laptopMin {
-    width: $laptop-min;
+  @include lgMin {
+    width: $lg-min;
   }
 
-  @include desktopMin {
-    width: $desktop-min;
+  @include xlMin {
+    width: $xl-min;
     padding-left: 25px;
     padding-right: 25px;
   }

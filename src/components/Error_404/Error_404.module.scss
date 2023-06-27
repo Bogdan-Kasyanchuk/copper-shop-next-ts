@@ -11,7 +11,7 @@
   flex-direction: column;
   max-width: 420px;
 
-  @include tabletMin {
+  @include mdMin {
     max-width: 700px;
   }
 
@@ -25,11 +25,11 @@
     font-weight: 700;
     line-height: 0.8;
 
-    @include tabletMin {
+    @include mdMin {
       font-size: 240px;
     }
 
-    @include desktopMin {
+    @include xlMin {
       font-size: 300px;
     }
   }
@@ -41,11 +41,11 @@
     font-weight: 700;
     font-size: 28px;
 
-    @include tabletMin {
+    @include mdMin {
       font-size: 38px;
     }
 
-    @include desktopMin {
+    @include xlMin {
       font-size: 46px;
     }
   }
@@ -54,11 +54,11 @@
     color: #a1a1a1;
     font-size: 18px;
 
-    @include tabletMin {
+    @include mdMin {
       font-size: 26px;
     }
 
-    @include desktopMin {
+    @include xlMin {
       font-size: 30px;
     }
   }

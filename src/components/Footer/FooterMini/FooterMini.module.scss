@@ -11,12 +11,12 @@
 }
 
 .logo {
-  @include tabletMin {
+  @include mdMin {
     width: 160px;
     height: 43px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     width: 175px;
     height: 47px;
   }

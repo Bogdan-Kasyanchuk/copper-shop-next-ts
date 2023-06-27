@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::before,
 *::after {
@@ -32,24 +36,24 @@ main {
   }
 
   &.main {
-    @include tabletMin {
+    @include mdMin {
       padding-top: 139px;
     }
 
-    @include laptopMin {
+    @include lgMin {
       padding-top: 91px;
     }
   }
 
   &.mini {
-    @include tabletMin {
+    @include mdMin {
       padding-top: 91px;
     }
   }
 
   &.main,
   &.mini {
-    @include desktopMin {
+    @include xlMin {
       padding-top: 105px;
     }
   }

@@ -1,5 +1,5 @@
 import { openSans } from '@/app/fonts';
-import '@/app/style.scss';
+import '@/styles/global.scss';
 
 export const metadata = {
   title: 'Copper shop',

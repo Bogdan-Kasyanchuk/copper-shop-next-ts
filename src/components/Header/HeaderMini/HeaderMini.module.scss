@@ -7,12 +7,12 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  @include tabletMin {
+  @include mdMin {
     padding-top: 24px;
     padding-bottom: 24px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     padding-top: 29px;
     padding-bottom: 29px;
   }
@@ -25,12 +25,12 @@
 }
 
 .logo {
-  @include tabletMin {
+  @include mdMin {
     width: 160px;
     height: 43px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     width: 175px;
     height: 47px;
   }

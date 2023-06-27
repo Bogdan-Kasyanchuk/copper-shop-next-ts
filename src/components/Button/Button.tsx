@@ -8,7 +8,7 @@ import type { TButtonProps } from './TButtonProps';
 export default function Button({
   children,
   type = 'button',
-  classNameBase,
+  className,
   classNameInner,
   space = '24px',
   align = 'center',
@@ -17,19 +17,21 @@ export default function Button({
   onClick,
   leftIcon,
   rightIcon,
+  ...rest
 }: TButtonProps) {
   return (
     <button
       type={type}
       className={clsx(
         styles.base,
-        classNameBase,
+        className,
         align !== 'center' && styles[align],
         variant !== 'solid-orange' && styles[variant],
         color !== 'white' && styles[color]
       )}
       style={{ gap: space }}
       onClick={onClick}
+      {...rest}
     >
       {leftIcon}
       <div className={clsx(styles.inner, classNameInner)}>{children} </div>

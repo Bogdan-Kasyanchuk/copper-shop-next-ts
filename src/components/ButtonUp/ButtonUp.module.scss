@@ -5,11 +5,11 @@
   bottom: 0;
   padding: 25px 16px 50px;
 
-  @include tabletMin {
+  @include mdMin {
     right: 40px;
   }
 
-  @include desktopMin {
+  @include xlMin {
     right: 50px;
   }
 
