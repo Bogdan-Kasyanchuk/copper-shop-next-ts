@@ -8,13 +8,13 @@
   padding-bottom: 20px;
 
   @include mdMin {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   @include xlMin {
-    padding-top: 29px;
-    padding-bottom: 29px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 

@@ -10,6 +10,7 @@ export default function Icon({
   height = '24px',
   fill = 'currentColor',
   stroke = 'currentColor',
+  ...rest
 }: TIconProps) {
   return (
     <svg
@@ -18,6 +19,7 @@ export default function Icon({
       height={height}
       fill={fill}
       stroke={stroke}
+      {...rest}
     >
       <use xlinkHref={`./sprite.svg#${iconName}`} />
     </svg>

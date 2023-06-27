@@ -15,7 +15,7 @@ export default function Home() {
         rerum tenetur nam itaque voluptatem non reiciendis totam vitae adipisci, sint
       </h1>
       <div className='grid gap-5'>
-        <Button align='start' leftIcon={<Icon iconName='heart' width='20px' height='20px' />}>
+        <Button align='start' leftIcon={<Icon iconName='heart' />}>
           Button
         </Button>
         <Button variant='solid-green' space='10px'>

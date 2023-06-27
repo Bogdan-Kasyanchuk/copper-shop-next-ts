@@ -1,6 +1,5 @@
-export type TTitleProps = TChildren & {
+export type TTitleProps = React.ComponentPropsWithoutRef<'h2' | 'h3' | 'h4'> & {
   align?: 'left' | 'center' | 'right';
-  className?: string;
   as?: 'h2' | 'h3' | 'h4';
   variant?: 'h2' | 'h3' | 'h4';
 };

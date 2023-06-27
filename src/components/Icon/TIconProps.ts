@@ -1,8 +1,3 @@
-export type TIconProps = {
+export type TIconProps = React.ComponentPropsWithoutRef<'svg'> & {
   iconName: string;
-  className?: string;
-  width?: string;
-  height?: string;
-  fill?: string;
-  stroke?: string;
 };

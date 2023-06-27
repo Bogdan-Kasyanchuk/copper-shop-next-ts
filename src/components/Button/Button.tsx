@@ -14,6 +14,7 @@ export default function Button({
   align = 'center',
   variant = 'solid-orange',
   color = 'white',
+  disabled = false,
   onClick,
   leftIcon,
   rightIcon,
@@ -29,6 +30,7 @@ export default function Button({
         variant !== 'solid-orange' && styles[variant],
         color !== 'white' && styles[color]
       )}
+      disabled={disabled}
       style={{ gap: space }}
       onClick={onClick}
       {...rest}

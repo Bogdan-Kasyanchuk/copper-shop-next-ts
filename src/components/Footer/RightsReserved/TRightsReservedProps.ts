@@ -1,3 +1,1 @@
-export type TRightsReservedProps = {
-  className?: string;
-};
+export type TRightsReservedProps = React.ComponentPropsWithoutRef<'p'>;
