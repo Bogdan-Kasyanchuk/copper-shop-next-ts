@@ -1,277 +1,277 @@
-//* Application Variables
+// //* Application Variables
 
-$ENV_IS_PUB: false !default;
-$IS_AMP: false !default;
-$SCREEN_THRESHODL: false !default;
+// $ENV_IS_PUB: false !default;
+// $IS_AMP: false !default;
+// $SCREEN_THRESHODL: false !default;
 
-// @if $IS_AMP {
-//     $SCREEN_THRESHODL: 'md';
-// }
+// // @if $IS_AMP {
+// //     $SCREEN_THRESHODL: 'md';
+// // }
 
-//## Paths
-$PATH_SVG: '../img/svg/';
-$PATH_IMG: '../img/';
-$PATH_FONTS: '../fonts/';
+// //## Paths
+// $PATH_SVG: '../img/svg/';
+// $PATH_IMG: '../img/';
+// $PATH_FONTS: '../fonts/';
 
-//## Screens
-// php: 'resources/_yfm/app.html'
-// js: 'resources/js/helpers/screen-match.js' (`ScreenMatch`)
-$screens: (
-    in: 0,
-    xxs: 375px,
-    xs: 428px,
-    sm: 480px,
-    md: 768px,
-    lg: 1024px,
-    xl: 1320px,
-    xxl: 1440px,
-    xxxl: 1600px,
-);
+// //## Screens
+// // php: 'resources/_yfm/app.html'
+// // js: 'resources/js/helpers/screen-match.js' (`ScreenMatch`)
+// $screens: (
+//     in: 0,
+//     xxs: 375px,
+//     xs: 428px,
+//     sm: 480px,
+//     md: 768px,
+//     lg: 1024px,
+//     xl: 1320px,
+//     xxl: 1440px,
+//     xxxl: 1600px,
+// );
 
-//## Colors
+// //## Colors
 
-$ideil: var(--ideil, #ed2024);
+// $ideil: var(--ideil, #ed2024);
 
-$steam: '#000000';
-$twitch: '#9146FF';
-$facebook: '#1877F2';
-$reddit: '#FF4500';
-$twitter: '#2AA9E0';
+// $steam: '#000000';
+// $twitch: '#9146FF';
+// $facebook: '#1877F2';
+// $reddit: '#FF4500';
+// $twitter: '#2AA9E0';
 
-$mark-bg: #fdd32c;
+// $mark-bg: #fdd32c;
 
-$shades: (
-    1: var(--shade-1, #f1f1f1),
-    2: var(--shade-2, #e6e6e6),
-    3: var(--shade-3, #c4c4c4),
-    4: var(--shade-4, #999999),
-    // - isDef
-    5: var(--shade-5, #757575),
-    6: var(--shade-6, #666666),
-    // - isDef
-    7: var(--shade-7, #4c4c4c),
-    // - isDef
-    8: var(--shade-8, #282828),
-    9: var(--shade-9, #1a1a1a),
-    // - isDef
-);
+// $shades: (
+//     1: var(--shade-1, #f1f1f1),
+//     2: var(--shade-2, #e6e6e6),
+//     3: var(--shade-3, #c4c4c4),
+//     4: var(--shade-4, #999999),
+//     // - isDef
+//     5: var(--shade-5, #757575),
+//     6: var(--shade-6, #666666),
+//     // - isDef
+//     7: var(--shade-7, #4c4c4c),
+//     // - isDef
+//     8: var(--shade-8, #282828),
+//     9: var(--shade-9, #1a1a1a),
+//     // - isDef
+// );
 
-$--white: #fff;
-$white: var(--white, $--white);
-$s-white: (
-    0: var(--s-white-0, rgba($--white, 0)),
-    1: var(--s-white-1, rgba($--white, 0.1)),
-    2: var(--s-white-2, rgba($--white, 0.2)),
-    3: var(--s-white-3, rgba($--white, 0.3)),
-    4: var(--s-white-4, rgba($--white, 0.4)),
-    5: var(--s-white-5, rgba($--white, 0.5)),
-    6: var(--s-white-6, rgba($--white, 0.6)),
-    7: var(--s-white-7, rgba($--white, 0.7)),
-    8: var(--s-white-8, rgba($--white, 0.8)),
-    9: var(--s-white-9, rgba($--white, 0.9)),
-);
+// $--white: #fff;
+// $white: var(--white, $--white);
+// $s-white: (
+//     0: var(--s-white-0, rgba($--white, 0)),
+//     1: var(--s-white-1, rgba($--white, 0.1)),
+//     2: var(--s-white-2, rgba($--white, 0.2)),
+//     3: var(--s-white-3, rgba($--white, 0.3)),
+//     4: var(--s-white-4, rgba($--white, 0.4)),
+//     5: var(--s-white-5, rgba($--white, 0.5)),
+//     6: var(--s-white-6, rgba($--white, 0.6)),
+//     7: var(--s-white-7, rgba($--white, 0.7)),
+//     8: var(--s-white-8, rgba($--white, 0.8)),
+//     9: var(--s-white-9, rgba($--white, 0.9)),
+// );
 
-$--black: #000;
-$black: var(--black, $--black);
-$s-black: (
-    0: var(--s-black-0, rgba($--black, 0)),
-    _3: var(--s-black-03, rgba($--black, 0.03)),
-    1: var(--s-black-1, rgba($--black, 0.1)),
-    15: var(--s-black-15, rgba($--black, 0.15)),
-    2: var(--s-black-2, rgba($--black, 0.2)),
-    3: var(--s-black-3, rgba($--black, 0.3)),
-    4: var(--s-black-4, rgba($--black, 0.4)),
-    5: var(--s-black-5, rgba($--black, 0.5)),
-    6: var(--s-black-6, rgba($--black, 0.6)),
-    7: var(--s-black-7, rgba($--black, 0.7)),
-    8: var(--s-black-8, rgba($--black, 0.8)),
-    9: var(--s-black-9, rgba($--black, 0.9)),
-);
+// $--black: #000;
+// $black: var(--black, $--black);
+// $s-black: (
+//     0: var(--s-black-0, rgba($--black, 0)),
+//     _3: var(--s-black-03, rgba($--black, 0.03)),
+//     1: var(--s-black-1, rgba($--black, 0.1)),
+//     15: var(--s-black-15, rgba($--black, 0.15)),
+//     2: var(--s-black-2, rgba($--black, 0.2)),
+//     3: var(--s-black-3, rgba($--black, 0.3)),
+//     4: var(--s-black-4, rgba($--black, 0.4)),
+//     5: var(--s-black-5, rgba($--black, 0.5)),
+//     6: var(--s-black-6, rgba($--black, 0.6)),
+//     7: var(--s-black-7, rgba($--black, 0.7)),
+//     8: var(--s-black-8, rgba($--black, 0.8)),
+//     9: var(--s-black-9, rgba($--black, 0.9)),
+// );
 
-$--blue-in: #003cff;
-$--blue-light: #4797fc;
-$--red: #fe0000;
-$--green: #38c550;
+// $--blue-in: #003cff;
+// $--blue-light: #4797fc;
+// $--red: #fe0000;
+// $--green: #38c550;
 
-$--primary-in: $--blue-in;
-$--primary-light: $--blue-light;
+// $--primary-in: $--blue-in;
+// $--primary-light: $--blue-light;
 
-//# Distribute
-$body-color: var(--body-color, $--black);
-$body-inverse-color: var(--body-inverse-color, $--white);
+// //# Distribute
+// $body-color: var(--body-color, $--black);
+// $body-inverse-color: var(--body-inverse-color, $--white);
 
-$body-bg: var(--body-bg, $--white);
-$body-inverse-bg: var(--body-inverse-bg, $--black);
+// $body-bg: var(--body-bg, $--white);
+// $body-inverse-bg: var(--body-inverse-bg, $--black);
 
-$primary-in: var(--primary, $--primary-in);
-$primary-light: var(--primary-light, lighten($--primary-in, 38%));
+// $primary-in: var(--primary, $--primary-in);
+// $primary-light: var(--primary-light, lighten($--primary-in, 38%));
 
-$success: var(--primary, $--green);
-$error: var(--primary, $--red);
+// $success: var(--primary, $--green);
+// $error: var(--primary, $--red);
 
-//## Font
+// //## Font
 
-//### Family
-$ff-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
-$ff-s-serif: 'Formular', Arial, sans-serif;
-$ff-monospace: PTMono, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-    monospace;
+// //### Family
+// $ff-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+//     'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+//     'Noto Color Emoji';
+// $ff-s-serif: 'Formular', Arial, sans-serif;
+// $ff-monospace: PTMono, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+//     monospace;
 
-$ff-in: $ff-s-serif, $ff-base;
+// $ff-in: $ff-s-serif, $ff-base;
 
-//## Weight
-$fw-thin: 100;
-$fw-light: 300;
-$fw-normal: 400;
-$fw-medium: 500;
-$fw-semibold: 600;
-$fw-bold: 700;
-$fw-black: 900;
+// //## Weight
+// $fw-thin: 100;
+// $fw-light: 300;
+// $fw-normal: 400;
+// $fw-medium: 500;
+// $fw-semibold: 600;
+// $fw-bold: 700;
+// $fw-black: 900;
 
-//## Type
+// //## Type
 
-//### Line Height
-$lh-xxs: 1;
-// $lh-xs: 1.1;
-$lh-sm: 1.2;
-// $lh-md: 1.3;
-$lh-in: 1.45;
+// //### Line Height
+// $lh-xxs: 1;
+// // $lh-xs: 1.1;
+// $lh-sm: 1.2;
+// // $lh-md: 1.3;
+// $lh-in: 1.45;
 
-//## Font Size
-$fs-dhero: 60px;
-$fs-d1: 48px;
-$fs-d2: 42px;
-$fs-d3: 36px;
-$fs-d4: 30px;
+// //## Font Size
+// $fs-dhero: 60px;
+// $fs-d1: 48px;
+// $fs-d2: 42px;
+// $fs-d3: 36px;
+// $fs-d4: 30px;
 
-$heading-fs: (
-    h1: (
-        in: 30px,
-        lg: 36px,
-    ),
-    h2: (
-        in: 28px,
-        lg: 30px,
-    ),
-    h3: (
-        in: 26px,
-        lg: 28px,
-    ),
-    h4: (
-        in: 24px,
-        lg: 26px,
-    ),
-    h5: (
-        in: 22px,
-        lg: 24px,
-    ),
-    h6: (
-        in: 20px,
-        lg: 22px,
-    ),
-);
+// $heading-fs: (
+//     h1: (
+//         in: 30px,
+//         lg: 36px,
+//     ),
+//     h2: (
+//         in: 28px,
+//         lg: 30px,
+//     ),
+//     h3: (
+//         in: 26px,
+//         lg: 28px,
+//     ),
+//     h4: (
+//         in: 24px,
+//         lg: 26px,
+//     ),
+//     h5: (
+//         in: 22px,
+//         lg: 24px,
+//     ),
+//     h6: (
+//         in: 20px,
+//         lg: 22px,
+//     ),
+// );
 
-$fs-xxs: 12px;
-$fs-xs: 14px;
-$fs-sm: 16px;
-$fs-md: 18px;
-$fs-lg: 20px;
-$fs-xl: 22px;
-$fs-xxl: 24px;
-$fs-xxxl: 28px;
+// $fs-xxs: 12px;
+// $fs-xs: 14px;
+// $fs-sm: 16px;
+// $fs-md: 18px;
+// $fs-lg: 20px;
+// $fs-xl: 22px;
+// $fs-xxl: 24px;
+// $fs-xxxl: 28px;
 
-$in_body-fs: $fs-md;
-$md_body-fs: $fs-lg;
+// $in_body-fs: $fs-md;
+// $md_body-fs: $fs-lg;
 
-//## Spacers
-$spacer: $lh-in * $md_body-fs;
-$spacers: (
-    0: 0 * $spacer,
-    1: divide(1, 4) * $spacer,
-    2: divide(2, 4) * $spacer,
-    3: divide(3, 4) * $spacer,
-    4: 1 * $spacer,
-    5: divide(5, 4) * $spacer,
-    6: divide(6, 4) * $spacer,
-    7: divide(7, 4) * $spacer,
-    8: 2 * $spacer,
-);
+// //## Spacers
+// $spacer: $lh-in * $md_body-fs;
+// $spacers: (
+//     0: 0 * $spacer,
+//     1: divide(1, 4) * $spacer,
+//     2: divide(2, 4) * $spacer,
+//     3: divide(3, 4) * $spacer,
+//     4: 1 * $spacer,
+//     5: divide(5, 4) * $spacer,
+//     6: divide(6, 4) * $spacer,
+//     7: divide(7, 4) * $spacer,
+//     8: 2 * $spacer,
+// );
 
-//## Grid
+// //## Grid
 
-$scrollbar-mw: 17px;
+// $scrollbar-mw: 17px;
 
-//## Layout Shhet
-$layout-sheet-w: (
-    // xxs: screen(xxs), // responsive to xs
-    xs: screen(xs),
-    // sm: screen(sm),
-    md: screen(md),
-    lg: screen(lg),
-    // - 23
-    xl: screen(xl),
-    // - 39
-    xxl: screen(xxl),
-    // - 55
-    xxxl: screen(xxxl),
-    // - 47
-);
+// //## Layout Shhet
+// $layout-sheet-w: (
+//     // xxs: screen(xxs), // responsive to xs
+//     xs: screen(xs),
+//     // sm: screen(sm),
+//     md: screen(md),
+//     lg: screen(lg),
+//     // - 23
+//     xl: screen(xl),
+//     // - 39
+//     xxl: screen(xxl),
+//     // - 55
+//     xxxl: screen(xxxl),
+//     // - 47
+// );
 
-//## Gaps
-$gap: 20px;
-$gaps: (
-    0: 0,
-    1: divide(1, 4) * $gap,
-    2: divide(2, 4) * $gap,
-    3: divide(3, 4) * $gap,
-    4: $gap,
-    5: divide(5, 4) * $gap,
-    6: divide(6, 4) * $gap,
-    7: divide(7, 4) * $gap,
-    8: 2 * $gap,
-);
+// //## Gaps
+// $gap: 20px;
+// $gaps: (
+//     0: 0,
+//     1: divide(1, 4) * $gap,
+//     2: divide(2, 4) * $gap,
+//     3: divide(3, 4) * $gap,
+//     4: $gap,
+//     5: divide(5, 4) * $gap,
+//     6: divide(6, 4) * $gap,
+//     7: divide(7, 4) * $gap,
+//     8: 2 * $gap,
+// );
 
-//## Misc
+// //## Misc
 
-$selection-bg: null;
+// $selection-bg: null;
 
-$transition-time: 0.15s;
-$tramsition-function: cubic-bezier(0.4, 0, 0.2, 1);
-$transition-in: $transition-time $tramsition-function;
+// $transition-time: 0.15s;
+// $tramsition-function: cubic-bezier(0.4, 0, 0.2, 1);
+// $transition-in: $transition-time $tramsition-function;
 
-$control-transition: color $transition-in,
-    // fill $transition-in,
-    background $transition-in,
-    border-color $transition-in,
-    // border-radius $transition-in,
-    box-shadow $transition-in,
-    opacity $transition-in, filter $transition-in;
+// $control-transition: color $transition-in,
+//     // fill $transition-in,
+//     background $transition-in,
+//     border-color $transition-in,
+//     // border-radius $transition-in,
+//     box-shadow $transition-in,
+//     opacity $transition-in, filter $transition-in;
 
-$zi-dropdown: 8 !default;
-$zi-sticky: 18 !default;
-$zi-fixed: 28 !default;
-$zi-modal-backdrop: 38 !default;
-$zi-modal: 48 !default;
-$zi-popover: 58 !default;
-$zi-tooltip: 68 !default;
-$zi-fixed: 30;
+// $zi-dropdown: 8 !default;
+// $zi-sticky: 18 !default;
+// $zi-fixed: 28 !default;
+// $zi-modal-backdrop: 38 !default;
+// $zi-modal: 48 !default;
+// $zi-popover: 58 !default;
+// $zi-tooltip: 68 !default;
+// $zi-fixed: 30;
 
-//# Borders
-$border-radius-sm: 6px;
-$border-radius-md: 20px;
+// //# Borders
+// $border-radius-sm: 6px;
+// $border-radius-md: 20px;
 
-$border-color-in: shade(2);
-$border-color-dark: shade(4, $s-black);
+// $border-color-in: shade(2);
+// $border-color-dark: shade(4, $s-black);
 
-//# Shadows
-$shadow: 0px 4px 36px shade(15, $s-black);
+// //# Shadows
+// $shadow: 0px 4px 36px shade(15, $s-black);
 
-//__## ----------
-$opc-8: 0.8;
-$opc-9: 0.9;
+// //__## ----------
+// $opc-8: 0.8;
+// $opc-9: 0.9;
 
-//__# Components
-$banner-h-in: 60px;
-$banner-h-safe: $banner-h-in;
+// //__# Components
+// $banner-h-in: 60px;
+// $banner-h-safe: $banner-h-in;

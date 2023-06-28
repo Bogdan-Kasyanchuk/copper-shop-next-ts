@@ -4,7 +4,7 @@
   line-height: 1.2;
   text-transform: uppercase;
 
-  @include mdMin {
+  @include breakpoint(md) {
     margin-bottom: 30px;
   }
 }
@@ -13,12 +13,12 @@
   margin-bottom: 30px;
   font-size: 30px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     margin-bottom: 40px;
     font-size: 60px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     margin-bottom: 50px;
     font-size: 100px;
   }
@@ -27,11 +27,11 @@
 .h3 {
   font-size: 24px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     font-size: 40px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     margin-bottom: 40px;
     font-size: 50px;
   }
@@ -40,12 +40,12 @@
 .h4 {
   font-size: 20px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     margin-bottom: 25px;
     font-size: 24px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     margin-bottom: 30px;
     font-size: 28px;
   }

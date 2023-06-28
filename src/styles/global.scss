@@ -45,24 +45,24 @@ body {
     }
 
     &.main {
-      @include mdMin {
+      @include breakpoint(md) {
         padding-top: 134px;
       }
 
-      @include lgMin {
+      @include breakpoint(lg) {
         padding-top: 93px;
       }
     }
 
     &.short {
-      @include mdMin {
+      @include breakpoint(md) {
         padding-top: 93px;
       }
     }
 
     &.main,
     &.short {
-      @include xlMin {
+      @include breakpoint(xl) {
         padding-top: 107px;
       }
     }

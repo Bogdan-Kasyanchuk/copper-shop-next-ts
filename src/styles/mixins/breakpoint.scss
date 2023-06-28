@@ -1,0 +1,33 @@
+$breakpoints: (
+  xs: $xs-min,
+  md: $md-min,
+  lg: $lg-min,
+  xl: $xl-min,
+  xxl: $xxl-min,
+);
+
+@mixin breakpoint($minValue: false, $maxValue: false) {
+  @if $minValue {
+    $minValue: map-get($breakpoints, $minValue);
+  }
+
+  @if $maxValue {
+    $maxValue: map-get($breakpoints, $maxValue) - 1;
+  }
+
+  @if $minValue and $maxValue {
+    @media (min-width: $minValue) and (max-width: $maxValue) {
+      @content;
+    }
+  } @else if $minValue {
+    @media (min-width: $minValue) {
+      @content;
+    }
+  } @else if $maxValue {
+    @media (max-width: $maxValue) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

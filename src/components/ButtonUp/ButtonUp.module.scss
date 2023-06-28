@@ -5,11 +5,11 @@
   bottom: 0;
   padding: 25px 16px 50px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     right: 40px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     right: 50px;
   }
 

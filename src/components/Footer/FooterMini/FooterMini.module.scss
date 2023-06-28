@@ -11,12 +11,12 @@
 }
 
 .logo {
-  @include mdMin {
+  @include breakpoint(md) {
     width: 160px;
     height: 43px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     width: 175px;
     height: 47px;
   }

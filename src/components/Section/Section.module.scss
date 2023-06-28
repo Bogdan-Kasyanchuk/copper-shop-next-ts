@@ -2,12 +2,12 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     padding-top: 45px;
     padding-bottom: 45px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     padding-top: 60px;
     padding-bottom: 60px;
   }

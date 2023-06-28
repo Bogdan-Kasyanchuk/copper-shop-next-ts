@@ -9,11 +9,11 @@
   flex-direction: column;
   gap: 30px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     padding-right: 140px;
   }
 
-  @include lgMin {
+  @include breakpoint(lg) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -22,7 +22,7 @@
 .rights-reserved {
   margin-top: 20px;
 
-  @include lgMin {
+  @include breakpoint(lg) {
     max-width: 155px;
   }
 }
@@ -32,11 +32,11 @@
   text-decoration-line: underline;
   margin-top: 6px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     font-size: 14px;
   }
 
-  @include lgMin {
+  @include breakpoint(lg) {
     margin-top: 20px;
   }
 
@@ -51,18 +51,18 @@
   justify-content: space-between;
   gap: 30px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     gap: 50px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     gap: 100px;
   }
 
   &__contacts {
     max-width: 165px;
 
-    @include sxMax {
+    @include breakpoint(false, md) {
       margin-right: 90px;
     }
   }
@@ -72,7 +72,7 @@
     font-size: 16px;
     margin-bottom: 16px;
 
-    @include mdMin {
+    @include breakpoint(md) {
       font-size: 18px;
     }
   }
@@ -90,7 +90,7 @@
       margin-bottom: 14px;
     }
 
-    @include mdMin {
+    @include breakpoint(md) {
       font-size: 16px;
 
       &:not(:last-child) {

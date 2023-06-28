@@ -10,7 +10,7 @@
   color: #fff;
   background: linear-gradient(92deg, #5e3928 20%, #e4a16f 93%);
 
-  @include mdMin {
+  @include breakpoint(md) {
     margin-left: auto;
     margin-right: auto;
     width: initial;

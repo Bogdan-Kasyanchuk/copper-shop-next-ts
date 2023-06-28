@@ -7,12 +7,12 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  @include mdMin {
+  @include breakpoint(md) {
     padding-top: 25px;
     padding-bottom: 25px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -25,12 +25,12 @@
 }
 
 .logo {
-  @include mdMin {
+  @include breakpoint(md) {
     width: 160px;
     height: 43px;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     width: 175px;
     height: 47px;
   }

@@ -5,21 +5,21 @@
   padding-right: 15px;
   width: 100%;
 
-  @include sxMin {
+  @include breakpoint(xs) {
     width: 100%;
   }
 
-  @include mdMin {
+  @include breakpoint(md) {
     width: $md-min;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  @include lgMin {
+  @include breakpoint(lg) {
     width: $lg-min;
   }
 
-  @include xlMin {
+  @include breakpoint(xl) {
     width: $xl-min;
     padding-left: 25px;
     padding-right: 25px;
