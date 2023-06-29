@@ -1,4 +1,4 @@
-export type TButtonProps = React.ComponentPropsWithoutRef<'button'> & {
+export type TButtonProps<T extends React.ElementType<any>> = React.ComponentPropsWithoutRef<T> & {
   classNameInner?: string;
   space?: string;
   align?: 'start' | 'center' | 'end';

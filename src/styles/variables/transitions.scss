@@ -1,0 +1,9 @@
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+$transition: 0.2s $cubic-bezier;
+
+$transition-colors: color $transition, background-color $transition, border-color $transition,
+  fill $transition, stroke $transition;
+
+$transition-opacity: opacity $transition;
+
+$transition-transform: transform $transition;

@@ -1,4 +1,7 @@
-import Button from '@/components/Button';
+import Link from 'next/link';
+
+import Button from '@/components/Button/Button';
+import ButtonLink from '@/components/Button/ButtonLink';
 import Container from '@/components/Container';
 import Icon from '@/components/Icon';
 import Title from '@/components/Title';
@@ -15,7 +18,10 @@ export default function Home() {
         rerum tenetur nam itaque voluptatem non reiciendis totam vitae adipisci, sint
       </h1>
       <div className='grid gap-5'>
-        <Button align='start' leftIcon={<Icon iconName='heart' />}>
+        <Button
+          leftIcon={<Icon iconName='heart' width='20px' height='20px' />}
+          rightIcon={<Icon iconName='heart' />}
+        >
           Button
         </Button>
         <Button variant='solid-green' space='10px'>
@@ -27,6 +33,9 @@ export default function Home() {
         <Button variant='outline-black' color='black' space='10px'>
           Button
         </Button>
+        <Link href='/contacts' className='mx-auto w-fit'>
+          <ButtonLink>ButtonLink</ButtonLink>
+        </Link>
       </div>
       <div className='grid gap-5'>
         <Title>h2-h2</Title>
